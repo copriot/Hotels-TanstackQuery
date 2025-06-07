@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Hotels API",
+    "description": "API collection for the Hotels application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Places",
+      "item": [
+        {
+          "name": "Get All Places",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/places",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "places"]
+            }
+          }
+        },
+        {
+          "name": "Create Place",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{baseUrl}}/api/places",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "places"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Sample Place\",\n    \"description\": \"Sample description\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Single Place",
+      "item": [
+        {
+          "name": "Get Place by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/place/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "place", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the place"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Place",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/place/:id",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "place", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the place to delete"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
