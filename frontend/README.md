@@ -37,3 +37,14 @@
 
 - useQuery
 - useMutation
+
+### useQuery Hook'u
+
+- useQuery hookuna API isteğinin ismini ve isteği atan fonksiyonu veriyoruz
+- useQuery bizim için API isteğini yapıyor, sürecin state'ini kontrol ediyor ve gerekli datayı dönüyor
+- API isteği yapıldığında data, isLoading, error gibi state'leri kontrol edebiliyoruz
+- Eğer error gelirse geçici hata olmadığından emin olmak için 3 istek yapılır
+- Eğer data gelirse cevabı cache'e kaydeder
+- Birden fazla component'da aynı veriyi kullanmak için tekrar tekrar API isteği yapılmaz
+- Eğer data cache'te varsa cache'den alır
+- Eğer data cache'te yoksa API isteği yapar ve cevabı cache'e kaydeder

@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@layer components {
+  .container {
+    @apply max-w-[1440px] mx-auto p-5;
+  }
+  .header-button {
+    @apply border rounded-md py-1 px-5 cursor-pointer;
+  }
+  .hero {
+    @apply h-[20vh] md:h-[30vh] grid place-items-center bg-cover bg-center bg-no-repeat rounded-xl;
+    background-image: linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.241),
+        rgba(255, 183, 0, 0.39)
+      ),
+      url("/bg.jpg");
+  }
+  .field {
+    @apply flex flex-col gap-2;
+  }
+  .input {
+    @apply border border-stone-300 bg-stone-50 shadow-sm rounded-md py-1 px-2;
+  }
+}
