@@ -22,4 +22,7 @@
   .input {
     @apply border border-stone-300 bg-stone-50 shadow-sm rounded-md py-1 px-2;
   }
+  .hotel-image {
+    @apply object-cover size-full rounded-lg;
+  }
 }

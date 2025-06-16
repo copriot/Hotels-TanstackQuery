@@ -13,7 +13,7 @@ const Filter: FC = () => {
     searchParams.set(name, value);
     setSearchParams(searchParams);
   };
-  console.log(locations);
+
   return (
     <form className="flex flex-col gap-4 lg:gap-10 lg:mt-15 lg:sticky top-10 bg-amber-400/10 rounded-lg p-5">
       <div className="field">

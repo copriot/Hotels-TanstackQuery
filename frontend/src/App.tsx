@@ -12,7 +12,7 @@ const App: FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/detail" element={<Detail />} />
+        <Route path="/place/:id" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );

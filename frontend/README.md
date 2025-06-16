@@ -48,3 +48,33 @@
 - Birden fazla component'da aynı veriyi kullanmak için tekrar tekrar API isteği yapılmaz
 - Eğer data cache'te varsa cache'den alır
 - Eğer data cache'te yoksa API isteği yapar ve cevabı cache'e kaydeder
+
+## Formik
+
+- Form'larda state yönetimi için kullanılan bir kütüphane
+- Form içerisindeki inputların değerlerini ve hatalarını yönetmek için kullanılır
+
+#Regex
+
+- Regular Expression
+- Düzenli ifadeler
+- String içerisinde arama yapmak için kullanılır
+- Örnek "1232434343567" içerisinde "567" aramak için "567" yazılır
+- String metinlerin belirli koşullara uygun olup olmadığını kontrol etmek için büyük harf, küçük harf, sayı ve özel karakter içermesi gerektiğini belirtmek için kullanılır.
+- Bir isim alanında sadece harflerin kullanılmasını sağlamak için kullanılır.
+
+### Regex Örneği - Güçlü Parola Kontrolü
+
+- ^(?!._(.)\1)(?=._[a-z])(?=._[A-Z])(?=._\d)(?=._[!@#$%^&_()\_\-+=\[{\]};:'",<.>/?\\|`~]).{8,}$
+
+- ^(?!.\*(.)\1) → Aynı karakterin art arda gelmesini yasaklar
+
+- (?=.\*[a-z]) → En az bir küçük harf
+
+- (?=.\*[A-Z]) → En az bir büyük harf
+
+- (?=.\*\d) → En az bir rakam
+
+- (?=._[!@#$%^&_()\_\-+=\[{\]};:'",<.>/?\\|~])` → En az bir özel karakter
+
+- .{8,} → En az 8 karakter uzunluğunda

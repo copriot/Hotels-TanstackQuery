@@ -4,12 +4,14 @@ import Loader from "../../components/loader";
 import Error from "../../components/error";
 import Card from "../../components/card";
 import { useSearchParams } from "react-router-dom";
+import type { PlaceData } from "../../types";
 
 const List: FC = () => {
   const [searchParams] = useSearchParams();
   const paramsObj = Object.fromEntries(searchParams.entries());
-  const { data, isLoading, error, refetch } = useGetPlaces(paramsObj);
-  console.log(paramsObj);
+  const { data, isLoading, error, refetch } = useGetPlaces(
+    paramsObj as unknown as PlaceData
+  );
 
   if (isLoading) return <Loader />;
   if (error) return <Error message={error.message} onRetry={refetch} />;
